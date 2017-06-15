@@ -17,7 +17,7 @@ $vars = array();
 $var_name = array();
 
 for ($i = 0; $i < count($string_parts); $i++ ) {
-    echo $string_parts[$i] . '<br/>';
+    // echo $string_parts[$i] . '<br/>';
     if (stristr($string_parts[$i],   ':')) {
        array_push($vars, preg_replace($pattern, $replacement, $string_parts[$i]));
     }
@@ -25,8 +25,8 @@ for ($i = 0; $i < count($string_parts); $i++ ) {
 
 
 for ($i = 0; $i < $var_count; $i++) {
-    echo '<input type="text" name="' . $vars . '" value="">';
-    echo '<br/>';
+    // echo '<input type="text" name="' . $vars . '" value="">';
+    // echo '<br/>';
 }
 
 $values = ['26', '30', '60', '1'];
@@ -37,7 +37,11 @@ $compiler = new Compiler();
 $executable = $compiler->compile($string);
 $result = round($executable->run(), 2);
 
-dd('La formula: [' . $string . ']  tiene: ' . $var_count . ' variables y da como resultado: ' . $result . '%');
+// dd('La formula: [' . $string . ']  tiene: ' . $var_count . ' variables y da como resultado: ' . $result . '%');
+
+
+// dd(convert_min_to_days(540));
+convertMinutesToDaysHoursMinutes(61);
 
 
 
