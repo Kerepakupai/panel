@@ -78,3 +78,17 @@ function convertMinutesToDaysHoursMinutes($minutes)
     dd($days . ' dias ' . $hours . ' horas y ' . $minutes. ' minutos');
 
 }
+
+function convert_date_es_to_en($date)
+{
+    if (strlen($date) < 10) return "";
+    $date = self::left($date, 10);
+    $date = str_replace("-", "/", $date);
+    if ($date == '00/00/0000') return "";
+    $parts = explode("/", $date);
+    return $parts[2] . '-' . $parts[1] . '-' . $parts[0];
+}
+
+function left($string, $count){
+    return substr($string, 0, $count);
+}
