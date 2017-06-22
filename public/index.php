@@ -7,6 +7,9 @@ use FormulaInterpreter\Compiler;
 
 $string = "((:var1 + :var2) / :var3 * :var4) * 100";
 
+$response = ['ballots' => true, 'comments' => true];
+$response['ballots'] = false;
+dd(json_encode($response));
 
 $var_count = substr_count($string, ':');
 $delimiter = ' ';
