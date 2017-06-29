@@ -5,6 +5,13 @@ require '../vendor/autoload.php';
 
 use FormulaInterpreter\Compiler;
 
+if (strtotime('2017-05-20') > strtotime( '2017-05-21' )) {
+    dd('Es Mayor!');
+} else {
+    dd('Es Menor!');
+}
+
+
 $string = "((:var1 + :var2) / :var3 * :var4) * 100";
 
 $response = ['ballots' => true, 'comments' => true];

@@ -24,3 +24,10 @@ $("#actionSendtoTechnicalClosed").click(function (e) {
         }
     });
 });
+
+
+function convertButtonLoading(button, text) {
+    text = typeof text !== 'undefined' ? text : 'Enviando ...';
+    button.html('<i class="fa fa-spin fa-spinner"></i> ' + text).prop('disabled', true);
+}
+
