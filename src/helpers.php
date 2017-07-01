@@ -93,6 +93,30 @@ function left($string, $count){
     return substr($string, 0, $count);
 }
 
+function weekDays($start_date, $end_date)
+{
+    // $start_date = new DateTime('2017-06-01');
+    $interval = new DateInterval('P1D');
+    // $end_date = new DateTime('2017-06-30');
+    // $date->add(new DateInterval('P1D'));
+    // $interval = $start_date->diff($end_date)->days;
+    $period = new DatePeriod($start_date, $interval, $end_date->add(new DateInterval('P1D')));
+    $dates = array();
+
+    foreach ($period as $date) {
+        $date->format('Y-m-d');
+        if (isWeekDay($date)) {
+            array_push($dates, $date->format('Y-m-d'));
+        }
+    }
+    return count($dates);
+}
+
+function isWeekDay($date)
+{
+    return  $date->format('N') > 5 ? false : true;
+}
+
 function handleDate($date)
 {
     if ($date === null || ctype_alpha(substr($date, 0, 2))) {
