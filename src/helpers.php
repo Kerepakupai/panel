@@ -92,3 +92,40 @@ function convert_date_es_to_en($date)
 function left($string, $count){
     return substr($string, 0, $count);
 }
+
+function handleDate($date)
+{
+    if ($date === null || ctype_alpha(substr($date, 0, 2))) {
+        $date = '21/06/2017';
+    }
+
+    $delimiter = (! strpos($date, '/'))
+        ? '-' : '/';
+
+    $date_formated = explode($delimiter, $date);
+
+    try {
+        if ($date_formated[1] > 12) {
+            $aux = $date_formated[0];
+            $date_formated[0] = $date_formated[1];
+            $date_formated[1] = $aux;
+        }
+
+        $day = str_pad($date_formated[0], 2, 0, STR_PAD_LEFT);
+        $month = str_pad($date_formated[1], 2, 0, STR_PAD_LEFT);
+        $year = $date_formated[2];
+        if(strlen($year) == 2)
+            $year = '20' . $date_formated[2];
+
+        $dateFormated = $year . '-' . $month . '-' . $day;
+
+        return new Carbon($dateFormated, 'America/Santiago');
+
+        // dd($newCustomer->last_mng);
+    } catch (\Exception $e) {
+        // echo $e;
+        return Carbon::now('America/Santiago');
+    }
+
+    return true;
+}
