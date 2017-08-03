@@ -9,10 +9,11 @@
         }
     ],
     "require": {
-        "mormat/php-formula-interpreter": "^1.0"
+        "mormat/php-formula-interpreter": "^1.0",
+        "rezzza/formulate": "^1.0"
     },
     "autoload": {
-        "files": ["src/helpers.php"],
+        "files": ["bootstrap/helpers.php"],
         "psr-4": {
             "Panel\\": "src/"
         }

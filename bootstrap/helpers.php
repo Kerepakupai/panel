@@ -1,5 +1,20 @@
 <?php
 
+function view($template, array $vars)
+{
+    extract($vars);
+
+    $path = 'C:\Ampps\www\panel\views\\';
+
+    ob_start();
+
+    require ($path . $template . '.php');
+
+    $templateContent = ob_get_clean();
+
+    require ($path . 'layout.php');
+}
+
 if (! function_exists('dd')) {
     function dd($message)
     {

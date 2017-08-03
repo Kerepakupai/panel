@@ -7,7 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInitc28d9e4243d666f9c7cacfd9aff4b707
 {
     public static $files = array (
-        '60f1347ae93e6f12d22fb3a17eea1e45' => __DIR__ . '/../..' . '/src/helpers.php',
+        'e88992873b7765f9b5710cab95ba5dd7' => __DIR__ . '/..' . '/hoa/consistency/Prelude.php',
+        '3e76f7f02b41af8cea96018933f6b7e3' => __DIR__ . '/..' . '/hoa/protocol/Wrapper.php',
+        '1709b14251724123f4383997745362e5' => __DIR__ . '/../..' . '/bootstrap/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -26,6 +28,22 @@ class ComposerStaticInitc28d9e4243d666f9c7cacfd9aff4b707
         'P' => 
         array (
             'Panel\\' => 6,
+        ),
+        'H' => 
+        array (
+            'Hoa\\Zformat\\' => 12,
+            'Hoa\\Visitor\\' => 12,
+            'Hoa\\Ustring\\' => 12,
+            'Hoa\\Stream\\' => 11,
+            'Hoa\\Regex\\' => 10,
+            'Hoa\\Protocol\\' => 13,
+            'Hoa\\Math\\' => 9,
+            'Hoa\\Iterator\\' => 13,
+            'Hoa\\File\\' => 9,
+            'Hoa\\Exception\\' => 14,
+            'Hoa\\Event\\' => 10,
+            'Hoa\\Consistency\\' => 16,
+            'Hoa\\Compiler\\' => 13,
         ),
         'D' => 
         array (
@@ -52,6 +70,58 @@ class ComposerStaticInitc28d9e4243d666f9c7cacfd9aff4b707
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'Hoa\\Zformat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/zformat',
+        ),
+        'Hoa\\Visitor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/visitor',
+        ),
+        'Hoa\\Ustring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/ustring',
+        ),
+        'Hoa\\Stream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/stream',
+        ),
+        'Hoa\\Regex\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/regex',
+        ),
+        'Hoa\\Protocol\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/protocol',
+        ),
+        'Hoa\\Math\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/math',
+        ),
+        'Hoa\\Iterator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/iterator',
+        ),
+        'Hoa\\File\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/file',
+        ),
+        'Hoa\\Exception\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/exception',
+        ),
+        'Hoa\\Event\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/event',
+        ),
+        'Hoa\\Consistency\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/consistency',
+        ),
+        'Hoa\\Compiler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hoa/compiler',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -59,6 +129,13 @@ class ComposerStaticInitc28d9e4243d666f9c7cacfd9aff4b707
     );
 
     public static $prefixesPsr0 = array (
+        'R' => 
+        array (
+            'Rezzza\\Formulate' => 
+            array (
+                0 => __DIR__ . '/..' . '/rezzza/formulate/src',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 
